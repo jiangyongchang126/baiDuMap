@@ -1,0 +1,61 @@
+//
+//  PrefixHeader.pch
+//  dituDemo
+//
+//  Created by 蒋永昌 on 04/10/2016.
+//  Copyright © 2016 蒋永昌. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "netoworkTool.h"
+#import "AFNetworking.h"
+#import  "Masonry.h"
+#import "KVNProgress.h"
+#import "SVProgressHUD.h"
+#import <UIImageView+WebCache.h>
+#import "Helper.h"
+#import "MJRefresh.h"
+
+// 周边酒店
+#define KNeerByHotel  @"http://webapi.houno.cn/ambitushotel.php"
+
+#define kScreenWidth [[UIScreen mainScreen] bounds].size.width
+#define kScreenHeight [[UIScreen mainScreen] bounds].size.height
+
+#define k_width self.view.bounds.size.width
+#define k_height self.view.bounds.size.height
+
+#define kWidth self.bounds.size.width
+#define kHeight self.bounds.size.height
+
+//#define IOS8_OR_LATER	( [[[UIDevice currentDevice] systemVersion] compare:@"8.0"] != NSOrderedAscending )
+//#define IOS7_OR_LATER	( [[[UIDevice currentDevice] systemVersion] compare:@"7.0"] != NSOrderedAscending )
+//#define IOS6_OR_LATER	( [[[UIDevice currentDevice] systemVersion] compare:@"6.0"] != NSOrderedAscending )
+
+#define isiOS10 ([[[[[UIDevice currentDevice] systemVersion] substringToIndex:1] stringByAppendingString:@"0"] intValue] == 10)
+
+
+//#define kNavHeight  (IOS7_OR_LATER ? 64 : 44)
+//#define kStatusBarHeight (IOS7_OR_LATER ? 0 : 20)
+#define kiOS10_20 20
+#define kiOS10_64 64
+
+//颜色创建
+#undef  RGBCOLOR
+#define RGBCOLOR(r,g,b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+
+#undef  RGBACOLOR
+#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+
+
+#ifdef DEBUG
+# define DLog(fmt, ...) NSLog((@"[文件名:%s]\n" "[函数名:%s]\n" "[行号:%d] \n" fmt), __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+# define DLog(...);
+#endif
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */

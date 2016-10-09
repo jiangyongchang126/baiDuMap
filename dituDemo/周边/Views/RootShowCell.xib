@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RootShowCell" rowHeight="50" id="KGk-i7-Jjw" customClass="RootShowCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rootshow" translatesAutoresizingMaskIntoConstraints="NO" id="7xB-zc-cGl">
+                        <rect key="frame" x="0.0" y="0.0" width="175" height="49.5"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="步行999.0米" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7j-il-g5u">
+                        <rect key="frame" x="50" y="10" width="125" height="29.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="125" id="VGI-te-QEi"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timeshow" translatesAutoresizingMaskIntoConstraints="NO" id="1Ap-i3-JZz">
+                        <rect key="frame" x="185" y="11" width="26" height="26.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="26" id="Uy8-4A-QYG"/>
+                            <constraint firstAttribute="width" constant="26" id="oR8-nG-OO9"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1小时20分钟" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OpT-S0-Mzi">
+                        <rect key="frame" x="216" y="10" width="96" height="29.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="96" id="Jl8-ii-arK"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="OpT-S0-Mzi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="6Hv-IQ-TcF"/>
+                    <constraint firstItem="D7j-il-g5u" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="9C1-OR-uht"/>
+                    <constraint firstItem="1Ap-i3-JZz" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="9rp-8c-jbt"/>
+                    <constraint firstItem="D7j-il-g5u" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="50" id="FIG-Bw-O1q"/>
+                    <constraint firstAttribute="bottom" secondItem="OpT-S0-Mzi" secondAttribute="bottom" constant="10" id="GgH-5x-xQN"/>
+                    <constraint firstItem="7xB-zc-cGl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Iei-xh-cb7"/>
+                    <constraint firstAttribute="trailing" secondItem="7xB-zc-cGl" secondAttribute="trailing" constant="145" id="POd-Wi-a8P"/>
+                    <constraint firstAttribute="bottom" secondItem="D7j-il-g5u" secondAttribute="bottom" constant="10" id="aCE-qV-mft"/>
+                    <constraint firstItem="OpT-S0-Mzi" firstAttribute="leading" secondItem="1Ap-i3-JZz" secondAttribute="trailing" constant="5" id="mxe-pA-DiT"/>
+                    <constraint firstItem="7xB-zc-cGl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="xRH-Qh-YZs"/>
+                    <constraint firstAttribute="bottom" secondItem="7xB-zc-cGl" secondAttribute="bottom" id="ytj-1O-dRT"/>
+                    <constraint firstAttribute="trailing" secondItem="OpT-S0-Mzi" secondAttribute="trailing" constant="8" id="zfB-Na-mN6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="hourLabel" destination="OpT-S0-Mzi" id="viu-2n-2bc"/>
+                <outlet property="walkLabel" destination="D7j-il-g5u" id="QJQ-Z1-wNc"/>
+            </connections>
+            <point key="canvasLocation" x="413" y="291"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="rootshow" width="108" height="25"/>
+        <image name="timeshow" width="20" height="20"/>
+    </resources>
+</document>
